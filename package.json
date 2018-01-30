@@ -1,6 +1,6 @@
 {
   "name": "react-overlay-pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable components to build Tooltip, Popover and Dialog.",
   "author": "Michael Hsu <evenchange4@gmail.com>",
   "license": "MIT",
