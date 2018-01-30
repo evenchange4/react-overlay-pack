@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DomAlign API 1`] = `
+<Component
+  config={
+    Object {
+      "offset": Array [
+        10,
+        10,
+      ],
+      "points": Array [
+        "tl",
+        "bl",
+      ],
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "antiquewhite",
+        "height": 100,
+        "width": 100,
+      }
+    }
+  >
+    Target node
+  </div>
+  <DomAlign
+    config={
+      Object {
+        "offset": Array [
+          10,
+          10,
+        ],
+        "points": Array [
+          "tl",
+          "bl",
+        ],
+      }
+    }
+    resize={false}
+    target={
+      <div
+        style="height: 100px; width: 100px;"
+      >
+        Target node
+      </div>
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "aliceblue",
+          "height": 50,
+          "width": 100,
+        }
+      }
+    >
+      Align node
+    </div>
+  </DomAlign>
+</Component>
+`;
+
+exports[`Storyshots DomAlign Center 1`] = `
+<Component
+  config={
+    Object {
+      "offset": Array [
+        5,
+        0,
+      ],
+      "points": Array [
+        "bl",
+        "tc",
+      ],
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "antiquewhite",
+        "height": 100,
+        "width": 100,
+      }
+    }
+  >
+    Target node
+  </div>
+  <DomAlign
+    config={
+      Object {
+        "offset": Array [
+          5,
+          0,
+        ],
+        "points": Array [
+          "bl",
+          "tc",
+        ],
+      }
+    }
+    resize={false}
+    target={
+      <div
+        style="height: 100px; width: 100px;"
+      >
+        Target node
+      </div>
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "aliceblue",
+          "height": 50,
+          "width": 100,
+        }
+      }
+    >
+      Align node
+    </div>
+  </DomAlign>
+</Component>
+`;

@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Overlay Basic 1`] = `
+<BasicOverlay
+  alignConfig={
+    Object {
+      "offset": Array [
+        5,
+        0,
+      ],
+      "points": Array [
+        "cl",
+        "cr",
+      ],
+    }
+  }
+>
+  <div>
+    <span
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "antiquewhite",
+        }
+      }
+    >
+      Hover me
+    </span>
+    <Overlay
+      alignConfig={
+        Object {
+          "offset": Array [
+            5,
+            0,
+          ],
+          "points": Array [
+            "cl",
+            "cr",
+          ],
+        }
+      }
+      onOutsideClick={[Function]}
+      resize={false}
+      target={
+        <span>
+          Hover me
+        </span>
+      }
+      transitionConfig={
+        Object {
+          "animation": Object {
+            "opacity": 1,
+          },
+          "style": Object {
+            "opacity": 0,
+          },
+        }
+      }
+    >
+      <Portal>
+        <ClickOutside
+          onClick={[Function]}
+        >
+          <DomAlign
+            config={
+              Object {
+                "offset": Array [
+                  5,
+                  0,
+                ],
+                "points": Array [
+                  "cl",
+                  "cr",
+                ],
+              }
+            }
+            resize={false}
+            target={
+              <span>
+                Hover me
+              </span>
+            }
+          >
+            <TweenOne
+              animation={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              attr="style"
+              component={false}
+              componentProps={Object {}}
+              onChange={[Function]}
+              reverseDelay={0}
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+              updateReStart={true}
+            >
+              <div
+                key="div"
+                style={
+                  Object {
+                    "backgroundColor": "aliceblue",
+                    "opacity": 0,
+                    "position": "absolute",
+                    "width": 300,
+                  }
+                }
+              >
+                This is overlay content.
+              </div>
+            </TweenOne>
+          </DomAlign>
+        </ClickOutside>
+      </Portal>
+    </Overlay>
+  </div>
+</BasicOverlay>
+`;
+
+exports[`Storyshots Overlay Dropdown 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <MenuOverlay
+    alignConfig={
+      Object {
+        "offset": Array [
+          0,
+          0,
+        ],
+        "points": Array [
+          "tl",
+          "bl",
+        ],
+      }
+    }
+    transitionConfig={
+      Object {
+        "animation": Object {
+          "opacity": 1,
+          "translateY": 0,
+        },
+        "style": Object {
+          "opacity": 0,
+          "transform": "translateY(-10px)",
+        },
+      }
+    }
+  >
+    <div>
+      <div
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "antiquewhite",
+          }
+        }
+      >
+        Click me
+      </div>
+    </div>
+  </MenuOverlay>
+  <MenuOverlay
+    alignConfig={
+      Object {
+        "offset": Array [
+          0,
+          0,
+        ],
+        "points": Array [
+          "tc",
+          "bc",
+        ],
+      }
+    }
+    transitionConfig={
+      Object {
+        "animation": Object {
+          "duration": 600,
+          "ease": "easeOutBounce",
+          "translateX": 0,
+          "translateY": 0,
+        },
+        "style": Object {
+          "transform": "translate(-20px, -20px)",
+        },
+      }
+    }
+  >
+    <div>
+      <div
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "antiquewhite",
+          }
+        }
+      >
+        Click me
+      </div>
+    </div>
+  </MenuOverlay>
+  <MenuOverlay
+    alignConfig={
+      Object {
+        "points": Array [
+          "tr",
+          "br",
+        ],
+        "targetOffset": Array [
+          0,
+          8,
+        ],
+      }
+    }
+    resize={true}
+    transitionConfig={
+      Object {
+        "animation": Object {
+          "ease": "easeOutQuart",
+          "translateY": 0,
+        },
+        "style": Object {
+          "transform": "translateY(-8px)",
+        },
+      }
+    }
+  >
+    <div>
+      <div
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "antiquewhite",
+          }
+        }
+      >
+        Click me
+      </div>
+    </div>
+  </MenuOverlay>
+</div>
+`;

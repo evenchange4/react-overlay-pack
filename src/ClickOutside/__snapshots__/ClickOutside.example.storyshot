@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ClickOutside API 1`] = `
+<ClickOutside
+  onClick={[Function]}
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "antiquewhite",
+        "height": 100,
+        "width": 500,
+      }
+    }
+  >
+    Click outside.
+    <br />
+    (Press [cmd+d] to open action logger.)
+  </div>
+</ClickOutside>
+`;
