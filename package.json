@@ -125,7 +125,7 @@
     "lib",
     "flow-typed"
   ],
-  "keywords": ["react-dnd", "dropzone", "render prop"],
+  "keywords": ["react", "portal", "overlay", "dialog", "popover", "tooltip"],
   "bugs": {
     "url": "https://github.com/evenchange4/react-overlay-pack/issues",
     "email": "evenchange4@gmail.com"
