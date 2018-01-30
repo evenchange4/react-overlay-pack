@@ -1,7 +1,6 @@
 # react-overlay-pack
 
-> Dropzone with render props built with react-dnd.  
-> This is a simple component for the use case of [native files](http://react-dnd.github.io/react-dnd/examples-other-native-files.html).
+> Reusable components to build Tooltip, Popover and Dialog.
 
 [![Travis][build-badge]][build]
 [![Codecov Status][codecov-badge]][codecov]
@@ -27,31 +26,133 @@ $ yarn add react-overlay-pack
 
 ## Usage
 
+### ClickOutside
+
 ```js
-import Dropzone from 'react-overlay-pack';
+import ClickOutside from 'react-overlay-pack/lib/ClickOutside';
 
-<Dropzone
-  onDrop={files => console.log(files)}
-  render={({ canDrop, isOver }) => (
-    <div>
-      Drop file here!
-      <pre>{JSON.stringify({ canDrop, isOver })}</pre>
-    </div>
-  )}
-/>;
+<ClickOutside onClick={e => console.log(e)}>
+  <div>content</div>
+</ClickOutside>;
 ```
-
-## API
 
 ```js
 type Props = {
-  onDrop: (files: Array<Object>, monitor: any) => void,
-  render: ({ canDrop: boolean, isOver: boolean }) => React.Element<any>,
-  accepts?: Array<string>,
+  children: React.Node,
+  onClick: (e: any) => void,
 };
 ```
 
-* `accepts` value: https://github.com/react-dnd/react-dnd/blob/master/packages/react-dnd-html5-backend/src/NativeTypes.js
+### DomAlign
+
+```js
+import DomAlign from 'react-overlay-pack/lib/DomAlign';
+
+<div ref={target => { this.target = target; }}>
+  Target node
+</div>
+
+<DomAlign
+  config={{ points: ['bl', 'tc'], offset: [5, 0] }}
+  target={this.target}
+  resize
+>
+  <div>
+    Align node
+  </div>
+</DomAlign>
+```
+
+```js
+type Props = {
+  children: React.Element<any>,
+  config: Object,
+  target: React.ElementRef<any>,
+  resize?: boolean,
+};
+```
+
+* `config`: https://github.com/yiminghe/dom-align#config-object-details
+
+### Overlay
+
+```js
+import Overlay from 'react-overlay-pack/lib/Overlay';
+
+<span
+  ref={target => {
+    this.target = target;
+  }}
+  onClick={() => this.setState({ show: true })}
+>
+  Target node
+</span>;
+
+{
+  this.state.show && (
+    <Overlay
+      target={this.target}
+      onOutsideClick={() => this.setState({ show: false })}
+      resize
+      alignConfig={{ points: ['tr', 'br'], targetOffset: [0, 8] }}
+      transitionConfig={{
+        style: { transform: 'translateY(-8px)' }, // From
+        animation: { translateY: 0 }, // To
+      }}
+    >
+      <div key="div">This is overlay content.</div>
+    </Overlay>
+  );
+}
+```
+
+```js
+type Props = {
+  children: any,
+  onOutsideClick?: (e: any) => void,
+  target?: React.ElementRef<any>,
+  alignConfig: Object,
+  transitionConfig?: Object,
+  resize?: boolean,
+};
+```
+
+* `alignConfig`: https://github.com/yiminghe/dom-align#config-object-details
+* `transitionConfig`: https://github.com/react-component/tween-one
+
+### Dialog
+
+```js
+import Dialog from 'react-overlay-pack/lib/Dialog';
+
+{
+  this.state.show && (
+    <Dialog onOutsideClick={() => this.setState({ show: false })}>
+      <div key="div">This is content.</div>
+    </Dialog>
+  );
+}
+```
+
+```js
+type Props = {
+  children: React.Node,
+  onOutsideClick: Function,
+  backdropTransition?: Object,
+  containerTransition?: Object,
+};
+```
+
+* `backdropTransition`: https://github.com/react-component/tween-one
+* `containerTransition`: https://github.com/react-component/tween-one
+
+### [Portal](https://github.com/tajo/react-portal)
+
+### [Transition](https://github.com/react-component/tween-one)
+
+## Inspiration
+
+* https://github.com/react-bootstrap/react-overlays
 
 ## Development
 

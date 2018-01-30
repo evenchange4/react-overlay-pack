@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Dialog API 1`] = `
+<StatefulDialog>
+  <div>
+    <span
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "antiquewhite",
+        }
+      }
+    >
+      Open dialog
+    </span>
+  </div>
+</StatefulDialog>
+`;
+
+exports[`Storyshots Dialog Custom transition 1`] = `
+<StatefulDialog
+  containerTransition={
+    Object {
+      "animation": Object {
+        "delay": 0,
+        "duration": 200,
+        "ease": "easeOutBounce",
+        "translateY": 40,
+      },
+      "style": Object {
+        "transform": "translateY(20px)",
+      },
+    }
+  }
+>
+  <div>
+    <span
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "antiquewhite",
+        }
+      }
+    >
+      Open dialog
+    </span>
+  </div>
+</StatefulDialog>
+`;

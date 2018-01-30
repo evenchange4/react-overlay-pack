@@ -8,6 +8,7 @@ import Transition from '../Transition';
 import Portal from '../Portal';
 import DomAlign from '../DomAlign';
 import ClickOutside from '../ClickOutside';
+import emptyFunction from '../utils/emptyFunction';
 
 class Overlay extends React.Component<{
   children: any,
@@ -26,7 +27,7 @@ class Overlay extends React.Component<{
     resize: PropTypes.bool,
   };
   static defaultProps = {
-    onOutsideClick: () => {},
+    onOutsideClick: emptyFunction,
     alignConfig: {
       points: ['tr', 'br'], // bottom-right
       offset: [0, 0],
