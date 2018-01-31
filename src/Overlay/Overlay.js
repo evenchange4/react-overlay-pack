@@ -67,11 +67,11 @@ class Overlay extends React.Component<{
       <Portal>
         <ClickOutside onClick={onOutsideClick}>
           <DomAlign config={{ ...alignConfig }} target={target} resize={resize}>
-            <Transition {...transitionConfig} component={false}>
-              {React.cloneElement(children, {
-                style: { ...children.props.style, position: 'absolute' },
-              })}
-            </Transition>
+            <div style={{ position: 'absolute' }}>
+              <Transition {...transitionConfig} component={false}>
+                {children}
+              </Transition>
+            </div>
           </DomAlign>
         </ClickOutside>
       </Portal>
