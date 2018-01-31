@@ -82,38 +82,45 @@ exports[`Storyshots Overlay Basic 1`] = `
               </span>
             }
           >
-            <TweenOne
-              animation={
-                Object {
-                  "opacity": 1,
-                }
-              }
-              attr="style"
-              component={false}
-              componentProps={Object {}}
-              onChange={[Function]}
-              reverseDelay={0}
+            <div
               style={
                 Object {
-                  "opacity": 0,
+                  "position": "absolute",
                 }
               }
-              updateReStart={true}
             >
-              <div
-                key="div"
-                style={
+              <TweenOne
+                animation={
                   Object {
-                    "backgroundColor": "aliceblue",
-                    "opacity": 0,
-                    "position": "absolute",
-                    "width": 300,
+                    "opacity": 1,
                   }
                 }
+                attr="style"
+                component={false}
+                componentProps={Object {}}
+                onChange={[Function]}
+                reverseDelay={0}
+                style={
+                  Object {
+                    "opacity": 0,
+                  }
+                }
+                updateReStart={true}
               >
-                This is overlay content.
-              </div>
-            </TweenOne>
+                <div
+                  key="div"
+                  style={
+                    Object {
+                      "backgroundColor": "aliceblue",
+                      "opacity": 0,
+                      "width": 300,
+                    }
+                  }
+                >
+                  This is overlay content.
+                </div>
+              </TweenOne>
+            </div>
           </DomAlign>
         </ClickOutside>
       </Portal>
@@ -215,13 +222,13 @@ exports[`Storyshots Overlay Dropdown 1`] = `
   <MenuOverlay
     alignConfig={
       Object {
-        "points": Array [
-          "tr",
-          "br",
-        ],
-        "targetOffset": Array [
+        "offset": Array [
+          -8,
           0,
-          8,
+        ],
+        "points": Array [
+          "cr",
+          "cl",
         ],
       }
     }
@@ -230,10 +237,10 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       Object {
         "animation": Object {
           "ease": "easeOutQuart",
-          "translateY": 0,
+          "translateX": 0,
         },
         "style": Object {
-          "transform": "translateY(-8px)",
+          "transform": "translateX(8px)",
         },
       }
     }

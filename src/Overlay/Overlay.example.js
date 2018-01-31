@@ -144,13 +144,13 @@ storiesOf('Overlay', module)
         />
         <MenuOverlay
           resize
-          alignConfig={{ points: ['tr', 'br'], targetOffset: [0, 8] }}
+          alignConfig={{ points: ['cr', 'cl'], offset: [-8, 0] }}
           transitionConfig={{
             style: {
-              transform: 'translateY(-8px)',
+              transform: 'translateX(8px)',
             },
             animation: {
-              translateY: 0,
+              translateX: 0,
               ease: 'easeOutQuart',
             },
           }}

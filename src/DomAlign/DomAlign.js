@@ -36,7 +36,10 @@ class DomAlign extends React.Component<
     }
   }
   componentDidUpdate() {
-    this.align();
+    // TODO: make it async. there is a problem of overlay in dialog case.
+    setTimeout(() => {
+      this.align();
+    }, 0);
   }
   componentWillUnmount() {
     if (this.props.resize) {
