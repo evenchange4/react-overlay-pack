@@ -1,7 +1,9 @@
 ## Change Log
 
-### upcoming (2018/01/31 09:26 +00:00)
+### v1.0.2 (2018/01/31 09:37 +00:00)
 
+* [ffb7735](https://github.com/evenchange4/react-overlay-pack/commit/ffb7735ce26279983c4596e2ac76ba988b75e28c) 1.0.2 (@evenchange4)
+* [#3](https://github.com/evenchange4/react-overlay-pack/pull/3) fix(Overlay, Domalign): there is a problem of overlay in dialog case. (#3) (@evenchange4)
 * [483d3e2](https://github.com/evenchange4/react-overlay-pack/commit/483d3e2b08c2feecdd46c1c9436877d773dce756) docs(CHANGELOG): release 1.0.1 (@evenchange4)
 
 ### v1.0.1 (2018/01/30 14:50 +00:00)
