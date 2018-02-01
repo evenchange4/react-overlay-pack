@@ -23,9 +23,6 @@
     "changelog":
       "github-changes -o evenchange4 -r react-overlay-pack -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
-  "peerDependencies": {
-    "react": "^16.0.0"
-  },
   "dependencies": {
     "dom-align": "^1.6.7",
     "prop-types": "^15.6.0",
