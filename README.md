@@ -160,6 +160,7 @@ type Props = {
 
 * node >= 9.4.0
 * yarn >= 1.3.2
+* react >= 16
 
 ```sh
 $ yarn install --pure-lockfile
