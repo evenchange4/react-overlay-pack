@@ -11,7 +11,7 @@
     "clean": "rm -rf lib",
     "prebuild": "npm run clean",
     "build":
-      "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/__tests__/*'",
+      "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/*.test.js'",
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",

@@ -34,6 +34,7 @@ class DomAlign extends React.Component<
     if (this.props.resize) {
       window.addEventListener('resize', this.align);
       window.addEventListener('scroll', this.align);
+      window.addEventListener('wheel', this.align);
     }
   }
   componentDidUpdate() {
@@ -44,6 +45,7 @@ class DomAlign extends React.Component<
     if (this.props.resize) {
       window.removeEventListener('resize', this.align);
       window.removeEventListener('scroll', this.align);
+      window.removeEventListener('wheel', this.align);
     }
     if (this.align && this.align.cancel) this.align.cancel();
     if (this.timeoutId) clearTimeout(this.timeoutId);
