@@ -33,25 +33,25 @@ class DomAlign extends React.Component<
     this.align();
     if (this.props.resize) {
       window.addEventListener('resize', this.align);
+      window.addEventListener('scroll', this.align);
     }
   }
   componentDidUpdate() {
     // TODO: make it async. there is a problem of overlay in dialog case.
-    setTimeout(() => {
-      this.align();
-    }, 0);
+    this.timeoutId = setTimeout(() => this.align());
   }
   componentWillUnmount() {
     if (this.props.resize) {
       window.removeEventListener('resize', this.align);
+      window.removeEventListener('scroll', this.align);
     }
-    if (this.align && this.align.cancel) {
-      this.align.cancel();
-    }
+    if (this.align && this.align.cancel) this.align.cancel();
+    if (this.timeoutId) clearTimeout(this.timeoutId);
   }
   onSourceRef = (source: React.ElementRef<any>) => {
     this.setState({ source });
   };
+  timeoutId: ?TimeoutID;
   align = rafThrottle(() => {
     const { target, config } = this.props;
     const { source } = this.state;
