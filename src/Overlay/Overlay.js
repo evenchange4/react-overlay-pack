@@ -2,6 +2,7 @@
 // @flow
 
 import * as React from 'react';
+import omit from 'ramda/src/omit';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import Transition from '../Transition';
@@ -17,6 +18,7 @@ class Overlay extends React.Component<{
   alignConfig: Object,
   transitionConfig?: Object,
   resize?: boolean,
+  style?: Object,
 }> {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -60,6 +62,8 @@ class Overlay extends React.Component<{
       transitionConfig,
       children,
       resize,
+      style,
+      ...otherProps
     } = this.props;
     const { onOutsideClick } = this;
 
@@ -67,7 +71,10 @@ class Overlay extends React.Component<{
       <Portal>
         <ClickOutside onClick={onOutsideClick}>
           <DomAlign config={{ ...alignConfig }} target={target} resize={resize}>
-            <div style={{ position: 'absolute' }}>
+            <div
+              style={{ position: 'absolute', ...style }}
+              {...omit(['onOutsideClick'])(otherProps)}
+            >
               <Transition {...transitionConfig} component={false}>
                 {children}
               </Transition>
