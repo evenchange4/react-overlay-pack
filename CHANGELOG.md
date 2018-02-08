@@ -1,5 +1,13 @@
 ## Change Log
 
+### v1.0.5 (2018/02/08 07:14 +00:00)
+
+* [7d8e735](https://github.com/evenchange4/react-overlay-pack/commit/7d8e7357e02c1f9d4f34faa75e1cee06167cfd6d) 1.0.5 (@evenchange4)
+* [#11](https://github.com/evenchange4/react-overlay-pack/pull/11) feat(Overlay): pass otherProps into div (#11) (@evenchange4)
+* [#10](https://github.com/evenchange4/react-overlay-pack/pull/10) chore(deps): update jest monorepo packages (#10) (@renovate[bot])
+* [#9](https://github.com/evenchange4/react-overlay-pack/pull/9) chore(deps): update dependency flow-bin to v0.65.0 (#9) (@renovate[bot])
+* [3e212d0](https://github.com/evenchange4/react-overlay-pack/commit/3e212d012031cd99ab7382ed0bf73db6e553c909) docs(CHANGELOG): release 1.0.4 (@evenchange4)
+
 ### v1.0.4 (2018/02/03 18:03 +00:00)
 
 * [52aed46](https://github.com/evenchange4/react-overlay-pack/commit/52aed4656a178e503857352ac13318785ae5d849) 1.0.4 (@evenchange4)
