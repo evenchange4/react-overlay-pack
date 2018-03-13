@@ -88,26 +88,24 @@ import Overlay from 'react-overlay-pack/lib/Overlay';
   Target node
 </span>;
 
-{
-  this.state.show && (
-    <Overlay
-      target={this.target}
-      onOutsideClick={() => this.setState({ show: false })}
-      resize
-      alignConfig={{ points: ['tr', 'br'], targetOffset: [0, 8] }}
-      transitionConfig={{
-        style: { transform: 'translateY(-8px)' }, // From
-        animation: { translateY: 0 }, // To
-      }}
-    >
-      <div key="div">This is overlay content.</div>
-    </Overlay>
-  );
-}
+<Overlay
+  show={this.state.show}
+  target={this.target}
+  onOutsideClick={() => this.setState({ show: false })}
+  resize
+  alignConfig={{ points: ['tr', 'br'], targetOffset: [0, 8] }}
+  transitionConfig={{
+    style: { transform: 'translateY(-8px)' }, // From
+    animation: { translateY: 0 }, // To
+  }}
+>
+  <div key="div">This is overlay content.</div>
+</Overlay>;
 ```
 
 ```js
 type Props = {
+  show: boolean,
   children: any,
   onOutsideClick?: (e: any) => void,
   target?: React.ElementRef<any>,
@@ -125,17 +123,17 @@ type Props = {
 ```js
 import Dialog from 'react-overlay-pack/lib/Dialog';
 
-{
-  this.state.show && (
-    <Dialog onOutsideClick={() => this.setState({ show: false })}>
-      <div key="div">This is content.</div>
-    </Dialog>
-  );
-}
+<Dialog
+  show={this.state.show}
+  onOutsideClick={() => this.setState({ show: false })}
+>
+  <div key="div">This is content.</div>
+</Dialog>;
 ```
 
 ```js
 type Props = {
+  show: boolean,
   children: React.Node,
   onOutsideClick: Function,
   backdropTransition?: Object,

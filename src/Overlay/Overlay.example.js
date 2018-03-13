@@ -33,13 +33,11 @@ class BasicOverlay extends React.Component<
           Hover me
         </span>
 
-        {show && (
-          <Overlay target={target} {...this.props}>
-            <div key="div" style={{ width: 300, backgroundColor: 'aliceblue' }}>
-              This is overlay content.
-            </div>
-          </Overlay>
-        )}
+        <Overlay show={show} target={target} {...this.props}>
+          <div key="div" style={{ width: 300, backgroundColor: 'aliceblue' }}>
+            This is overlay content.
+          </div>
+        </Overlay>
       </div>
     );
   }
@@ -71,21 +69,21 @@ class MenuOverlay extends React.Component<
           Click me
         </div>
 
-        {show && (
-          <Overlay target={target} onOutsideClick={onHide} {...this.props}>
-            <div
-              key="menu"
-              style={{ width: 300, backgroundColor: 'aliceblue' }}
-            >
-              <div onClick={action('click 1')} onKeyPress={action('click 1')}>
-                Item 1
-              </div>
-              <div onClick={action('click 2')} onKeyPress={action('click 2')}>
-                Item 2
-              </div>
+        <Overlay
+          show={show}
+          target={target}
+          onOutsideClick={onHide}
+          {...this.props}
+        >
+          <div key="menu" style={{ width: 300, backgroundColor: 'aliceblue' }}>
+            <div onClick={action('click 1')} onKeyPress={action('click 1')}>
+              Item 1
             </div>
-          </Overlay>
-        )}
+            <div onClick={action('click 2')} onKeyPress={action('click 2')}>
+              Item 2
+            </div>
+          </div>
+        </Overlay>
       </div>
     );
   }
