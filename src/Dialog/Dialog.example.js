@@ -30,16 +30,15 @@ class StatefulDialog extends React.Component<
           Open dialog
         </span>
 
-        {show && (
-          <Dialog
-            onOutsideClick={onHide}
-            containerTransition={containerTransition}
-          >
-            <div key="div" style={{ width: 300, backgroundColor: 'aliceblue' }}>
-              This is content.
-            </div>
-          </Dialog>
-        )}
+        <Dialog
+          show={show}
+          onOutsideClick={onHide}
+          containerTransition={containerTransition}
+        >
+          <div key="div" style={{ width: 300, backgroundColor: 'aliceblue' }}>
+            This is content.
+          </div>
+        </Dialog>
       </div>
     );
   }

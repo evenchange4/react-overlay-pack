@@ -5,83 +5,47 @@ import Portal from '../Portal';
 import Transition from '../Transition';
 import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
-
-const Container = (props: { children?: React.Node }) => (
-  <div
-    {...props}
-    style={{
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-      overflow: 'auto',
-    }}
-  />
-);
-
-const BackdropContainer = ({
-  style,
-  ...otherProps
-}: {
-  style?: Object,
-  children?: React.Node,
-}) => (
-  <div
-    {...otherProps}
-    style={{
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      backgroundColor: 'rgba(0, 0, 0, 0.3)',
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-      overflow: 'auto',
-      ...style,
-    }}
-  />
-);
+import { BackdropContainer, Container } from './Components';
 
 const Dialog = ({
-  onOutsideClick,
+  show,
   children,
+  onOutsideClick,
   backdropTransition,
   containerTransition,
 }: {
+  show: boolean,
   children: React.Node,
   onOutsideClick: Function,
   backdropTransition?: Object,
   containerTransition?: Object,
-}) => (
-  <React.Fragment>
-    <Portal>
-      <Transition component={BackdropContainer} {...backdropTransition} />
-    </Portal>
-    <Portal>
-      <Container>
-        <ClickOutside onClick={onOutsideClick}>
-          <Transition component={false} {...containerTransition}>
-            {children}
-          </Transition>
-        </ClickOutside>
-      </Container>
-    </Portal>
-  </React.Fragment>
-);
+}) =>
+  show && (
+    <React.Fragment>
+      <Portal>
+        <Transition component={BackdropContainer} {...backdropTransition} />
+      </Portal>
+      <Portal>
+        <Container>
+          <ClickOutside onClick={onOutsideClick}>
+            <Transition component={false} {...containerTransition}>
+              {children}
+            </Transition>
+          </ClickOutside>
+        </Container>
+      </Portal>
+    </React.Fragment>
+  );
 
 Dialog.propTypes = {
+  show: PropTypes.bool,
   children: PropTypes.node.isRequired,
   onOutsideClick: PropTypes.func,
   backdropTransition: PropTypes.any,
   containerTransition: PropTypes.any,
 };
 Dialog.defaultProps = {
+  show: false,
   onOutsideClick: emptyFunction,
   backdropTransition: {
     style: {

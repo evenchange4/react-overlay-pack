@@ -42,6 +42,7 @@ exports[`Storyshots Overlay Basic 1`] = `
       }
       onOutsideClick={[Function]}
       resize={false}
+      show={true}
       target={
         <span>
           Hover me
@@ -176,6 +177,40 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       >
         Click me
       </div>
+      <Overlay
+        alignConfig={
+          Object {
+            "offset": Array [
+              0,
+              0,
+            ],
+            "points": Array [
+              "tl",
+              "bl",
+            ],
+          }
+        }
+        onOutsideClick={[Function]}
+        resize={false}
+        show={false}
+        target={
+          <div>
+            Click me
+          </div>
+        }
+        transitionConfig={
+          Object {
+            "animation": Object {
+              "opacity": 1,
+              "translateY": 0,
+            },
+            "style": Object {
+              "opacity": 0,
+              "transform": "translateY(-10px)",
+            },
+          }
+        }
+      />
     </div>
   </MenuOverlay>
   <MenuOverlay
@@ -217,6 +252,41 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       >
         Click me
       </div>
+      <Overlay
+        alignConfig={
+          Object {
+            "offset": Array [
+              0,
+              0,
+            ],
+            "points": Array [
+              "tc",
+              "bc",
+            ],
+          }
+        }
+        onOutsideClick={[Function]}
+        resize={false}
+        show={false}
+        target={
+          <div>
+            Click me
+          </div>
+        }
+        transitionConfig={
+          Object {
+            "animation": Object {
+              "duration": 600,
+              "ease": "easeOutBounce",
+              "translateX": 0,
+              "translateY": 0,
+            },
+            "style": Object {
+              "transform": "translate(-20px, -20px)",
+            },
+          }
+        }
+      />
     </div>
   </MenuOverlay>
   <MenuOverlay
@@ -257,6 +327,39 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       >
         Click me
       </div>
+      <Overlay
+        alignConfig={
+          Object {
+            "offset": Array [
+              -8,
+              0,
+            ],
+            "points": Array [
+              "cr",
+              "cl",
+            ],
+          }
+        }
+        onOutsideClick={[Function]}
+        resize={true}
+        show={false}
+        target={
+          <div>
+            Click me
+          </div>
+        }
+        transitionConfig={
+          Object {
+            "animation": Object {
+              "ease": "easeOutQuart",
+              "translateX": 0,
+            },
+            "style": Object {
+              "transform": "translateX(8px)",
+            },
+          }
+        }
+      />
     </div>
   </MenuOverlay>
 </div>

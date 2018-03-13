@@ -12,6 +12,7 @@ import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
 
 class Overlay extends React.Component<{
+  show: boolean,
   children: any,
   onOutsideClick?: (e: any) => void,
   target?: React.ElementRef<any>,
@@ -21,6 +22,7 @@ class Overlay extends React.Component<{
   style?: Object,
 }> {
   static propTypes = {
+    show: PropTypes.bool,
     children: PropTypes.node.isRequired,
     onOutsideClick: PropTypes.func, // Note: for root close
     target: PropTypes.object,
@@ -29,6 +31,7 @@ class Overlay extends React.Component<{
     resize: PropTypes.bool,
   };
   static defaultProps = {
+    show: false,
     onOutsideClick: emptyFunction,
     alignConfig: {
       points: ['tr', 'br'], // bottom-right
@@ -57,6 +60,7 @@ class Overlay extends React.Component<{
 
   render() {
     const {
+      show,
       alignConfig,
       target,
       transitionConfig,
@@ -68,20 +72,26 @@ class Overlay extends React.Component<{
     const { onOutsideClick } = this;
 
     return (
-      <Portal>
-        <ClickOutside onClick={onOutsideClick}>
-          <DomAlign config={{ ...alignConfig }} target={target} resize={resize}>
-            <div
-              style={{ position: 'absolute', ...style }}
-              {...omit(['onOutsideClick'])(otherProps)}
+      show && (
+        <Portal>
+          <ClickOutside onClick={onOutsideClick}>
+            <DomAlign
+              config={{ ...alignConfig }}
+              target={target}
+              resize={resize}
             >
-              <Transition {...transitionConfig} component={false}>
-                {children}
-              </Transition>
-            </div>
-          </DomAlign>
-        </ClickOutside>
-      </Portal>
+              <div
+                style={{ position: 'absolute', ...style }}
+                {...omit(['onOutsideClick'])(otherProps)}
+              >
+                <Transition {...transitionConfig} component={false}>
+                  {children}
+                </Transition>
+              </div>
+            </DomAlign>
+          </ClickOutside>
+        </Portal>
+      )
     );
   }
 }

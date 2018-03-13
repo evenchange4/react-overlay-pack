@@ -14,6 +14,36 @@ exports[`Storyshots Dialog API 1`] = `
     >
       Open dialog
     </span>
+    <Dialog
+      backdropTransition={
+        Object {
+          "animation": Object {
+            "delay": 0,
+            "duration": 200,
+            "ease": "easeOutCubic",
+            "opacity": 1,
+          },
+          "style": Object {
+            "opacity": 0.3,
+          },
+        }
+      }
+      containerTransition={
+        Object {
+          "animation": Object {
+            "delay": 0,
+            "duration": 200,
+            "ease": "easeOutQuart",
+            "translateY": 0,
+          },
+          "style": Object {
+            "transform": "translateY(-20px)",
+          },
+        }
+      }
+      onOutsideClick={[Function]}
+      show={false}
+    />
   </div>
 </StatefulDialog>
 `;
@@ -46,6 +76,36 @@ exports[`Storyshots Dialog Custom transition 1`] = `
     >
       Open dialog
     </span>
+    <Dialog
+      backdropTransition={
+        Object {
+          "animation": Object {
+            "delay": 0,
+            "duration": 200,
+            "ease": "easeOutCubic",
+            "opacity": 1,
+          },
+          "style": Object {
+            "opacity": 0.3,
+          },
+        }
+      }
+      containerTransition={
+        Object {
+          "animation": Object {
+            "delay": 0,
+            "duration": 200,
+            "ease": "easeOutBounce",
+            "translateY": 40,
+          },
+          "style": Object {
+            "transform": "translateY(20px)",
+          },
+        }
+      }
+      onOutsideClick={[Function]}
+      show={false}
+    />
   </div>
 </StatefulDialog>
 `;
