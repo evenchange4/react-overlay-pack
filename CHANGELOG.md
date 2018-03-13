@@ -1,5 +1,12 @@
 ## Change Log
 
+### v2.0.0 (2018/03/13 05:41 +00:00)
+
+* [a5b1638](https://github.com/evenchange4/react-overlay-pack/commit/a5b163882b754419060a13c1db6d4fe63651c878) 2.0.0 (@evenchange4)
+* [4408512](https://github.com/evenchange4/react-overlay-pack/commit/4408512711965a20b4bf3903f7b62a6a940ce24e) chore: ncu update & flow-typed update & upgrade node 9.8.0 and yarn 1.5.1 (@evenchange4)
+* [2e6c6df](https://github.com/evenchange4/react-overlay-pack/commit/2e6c6dfa4b283dec543a03707e2bb8933f457dcc) feat(Dialog, Overlay): add show props [BREAKING CHANGES](@evenchange4)
+* [e0c981f](https://github.com/evenchange4/react-overlay-pack/commit/e0c981f352f76e06d4db5f0acb45d974a17d9f98) docs(CHANGELOG): release 1.0.5 (@evenchange4)
+
 ### v1.0.5 (2018/02/08 07:14 +00:00)
 
 * [7d8e735](https://github.com/evenchange4/react-overlay-pack/commit/7d8e7357e02c1f9d4f34faa75e1cee06167cfd6d) 1.0.5 (@evenchange4)
