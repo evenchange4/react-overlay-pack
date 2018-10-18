@@ -41,11 +41,13 @@ exports[`Storyshots DomAlign API 1`] = `
     }
     resize={false}
     target={
-      <div
-        style="height: 100px; width: 100px;"
-      >
-        Target node
-      </div>
+      Object {
+        "current": <div
+          style="height: 100px; width: 100px;"
+        >
+          Target node
+        </div>,
+      }
     }
   >
     <div
@@ -104,11 +106,13 @@ exports[`Storyshots DomAlign Center 1`] = `
     }
     resize={false}
     target={
-      <div
-        style="height: 100px; width: 100px;"
-      >
-        Target node
-      </div>
+      Object {
+        "current": <div
+          style="height: 100px; width: 100px;"
+        >
+          Target node
+        </div>,
+      }
     }
   >
     <div

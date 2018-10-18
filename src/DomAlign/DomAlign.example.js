@@ -2,30 +2,26 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import DomAlign from '.';
+import DomAlign from './DomAlign';
 
-class Component extends React.Component<
-  {
-    config: Object,
-  },
-  {
-    target?: React.ElementRef<any>,
-  },
-> {
-  state = { target: undefined };
-  onRef = (target: React.ElementRef<any>) => this.setState({ target });
+class Component extends React.Component<{
+  config: Object,
+}> {
+  target = React.createRef();
+
   render() {
     const { config } = this.props;
+    const { target } = this;
     return (
       <React.Fragment>
         <div
-          ref={this.onRef}
+          ref={target}
           style={{ backgroundColor: 'antiquewhite', height: 100, width: 100 }}
         >
           Target node
         </div>
 
-        <DomAlign config={config} target={this.state.target}>
+        <DomAlign config={config} target={target}>
           <div style={{ backgroundColor: 'aliceblue', height: 50, width: 100 }}>
             Align node
           </div>

@@ -6,18 +6,30 @@ import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import rafThrottle from 'raf-throttle';
 
-class ClickOutside extends React.Component<{
+export type Props = {
   children: React.Node,
   onClick: (e: any) => void,
-}> {
+};
+
+class ClickOutside extends React.Component<Props> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired,
   };
+
+  handleClickOutside = rafThrottle((e: any) => {
+    const { onClick } = this.props;
+    const node = findDOMNode(this);
+    if (node && node.contains(e.target)) return; // Node: Omit clicking itself.
+
+    onClick(e);
+  });
+
   componentDidMount() {
     document.addEventListener('click', this.handleClickOutside, true);
     document.addEventListener('touchend', this.handleClickOutside, true);
   }
+
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside, true);
     document.removeEventListener('touchend', this.handleClickOutside, true);
@@ -26,14 +38,10 @@ class ClickOutside extends React.Component<{
       this.handleClickOutside.cancel();
     }
   }
-  handleClickOutside = rafThrottle((e: any) => {
-    const node = findDOMNode(this);
-    if (node && node.contains(e.target)) return; // Node: Omit clicking itself.
 
-    this.props.onClick(e);
-  });
   render() {
-    return this.props.children;
+    const { children } = this.props;
+    return children;
   }
 }
 

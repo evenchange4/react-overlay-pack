@@ -1,74 +1,93 @@
 {
   "name": "react-overlay-pack",
   "version": "2.0.0",
-  "description": "Reusable components to build Tooltip, Popover and Dialog.",
-  "author": "Michael Hsu <evenchange4@gmail.com>",
-  "license": "MIT",
   "typings": "./index.d.ts",
   "main": "lib/index.js",
-  "files": ["lib", "index.d.ts"],
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib"
+  ],
   "scripts": {
-    "clean": "rm -rf lib",
+    "clean": "nwb clean-module && nwb clean-demo",
     "prebuild": "npm run clean",
-    "build":
-      "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/*.test.js'",
+    "build": "nwb build-react-component",
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "npm run clean && npm run build",
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "eslint": "eslint ./",
     "flow": "flow",
     "precommit": "lint-staged",
-    "format": "prettier --write 'src/**/*.js' '.storybook/*.js' '*.{json,md}'",
-    "changelog":
-      "github-changes -o evenchange4 -r react-overlay-pack -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+    "format": "prettier --write '**/*.{js,json,md}' '*.{json,md,js}'",
+    "changelog": "github-changes -o evenchange4 -r react-overlay-pack -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
-    "dom-align": "^1.6.7",
-    "prop-types": "^15.6.1",
+    "dom-align": "^1.8.0",
+    "prop-types": "^15.6.2",
     "raf-throttle": "^2.0.3",
     "ramda": "^0.25.0",
-    "rc-tween-one": "^1.7.3",
-    "react-portal": "^4.1.3"
+    "rc-tween-one": "^2.2.12",
+    "react-portal": "^4.1.5"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.40",
-    "@babel/core": "7.0.0-beta.40",
-    "@babel/node": "7.0.0-beta.40",
-    "@babel/preset-env": "7.0.0-beta.40",
-    "@storybook/addon-actions": "3.3.15",
-    "@storybook/addon-info": "3.3.15",
-    "@storybook/addon-links": "3.3.15",
-    "@storybook/addon-options": "3.3.15",
-    "@storybook/addon-storyshots": "3.3.15",
-    "@storybook/react": "3.3.15",
+    "@babel/core": "7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "4.0.0-rc.1",
+    "@storybook/addon-info": "4.0.0-rc.1",
+    "@storybook/addon-links": "4.0.0-rc.1",
+    "@storybook/addon-options": "4.0.0-rc.1",
+    "@storybook/addon-storyshots": "4.0.0-rc.1",
+    "@storybook/react": "4.0.0-rc.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "8.2.2",
-    "babel-jest": "22.4.1",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-preset-react-app": "next",
-    "codecov": "3.0.0",
-    "enzyme": "3.3.0",
-    "enzyme-adapter-react-16": "1.1.1",
-    "enzyme-to-json": "3.3.1",
-    "eslint": "4.18.2",
-    "eslint-config-airbnb": "16.1.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-flowtype": "2.46.1",
-    "eslint-plugin-import": "2.9.0",
-    "eslint-plugin-jest": "21.14.1",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-prettier": "2.6.0",
-    "eslint-plugin-react": "7.7.0",
-    "flow-bin": "0.67.1",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "codecov": "3.1.0",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "enzyme-to-json": "3.3.4",
+    "eslint": "5.7.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-flowtype": "3.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "21.25.1",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "flow-bin": "0.83.0",
     "github-changes": "1.1.2",
-    "husky": "0.14.3",
-    "jest": "22.4.2",
-    "lint-staged": "7.0.0",
-    "prettier": "1.11.1",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "react-test-renderer": "16.2.0"
+    "husky": "1.1.2",
+    "jest": "23.6.0",
+    "lint-staged": "7.3.0",
+    "nwb": "^0.23.0",
+    "prettier": "1.14.3",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-test-renderer": "16.5.2"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "require-context-hook",
+          "@babel/plugin-proposal-class-properties"
+        ],
+        "presets": [
+          [
+            "@babel/preset-env"
+          ],
+          "@babel/preset-react",
+          "@babel/preset-flow"
+        ]
+      }
+    }
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
@@ -77,7 +96,10 @@
       "!src/**/*.test.js",
       "!src/**/*.example.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/lib/"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
+    ],
     "resetMocks": true,
     "resetModules": true
   },
@@ -86,7 +108,10 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.{js,json,md}": ["prettier --write", "git add"]
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -98,7 +123,11 @@
       "prettier/react",
       "prettier/flowtype"
     ],
-    "plugins": ["prettier", "jest", "flowtype"],
+    "plugins": [
+      "prettier",
+      "jest",
+      "flowtype"
+    ],
     "env": {
       "jest/globals": true
     },
@@ -107,7 +136,9 @@
       "react/jsx-filename-extension": [
         1,
         {
-          "extensions": [".js"]
+          "extensions": [
+            ".js"
+          ]
         }
       ],
       "import/no-extraneous-dependencies": 0,
@@ -116,14 +147,17 @@
       "react/require-default-props": 0
     }
   },
-  "eslintIgnore": [
-    "node_modules",
-    "coverage",
-    "storybook-static",
-    "lib",
-    "flow-typed"
+  "description": "Reusable components to build Tooltip, Popover and Dialog.",
+  "author": "Michael Hsu <evenchange4@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "portal",
+    "overlay",
+    "dialog",
+    "popover",
+    "tooltip"
   ],
-  "keywords": ["react", "portal", "overlay", "dialog", "popover", "tooltip"],
   "bugs": {
     "url": "https://github.com/evenchange4/react-overlay-pack/issues",
     "email": "evenchange4@gmail.com"

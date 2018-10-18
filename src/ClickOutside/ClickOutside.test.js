@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import ClickOutside from '../ClickOutside';
+import ClickOutside from './ClickOutside';
 
 jest.mock('raf-throttle', () => a => {
   const fn = a;

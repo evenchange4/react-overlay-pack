@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { mount } from 'enzyme';
-import DomAlign from '../DomAlign';
+import DomAlign from './DomAlign';
 
 jest.mock('raf-throttle', () => a => {
   const fn = a;

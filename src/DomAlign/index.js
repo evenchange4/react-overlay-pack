@@ -1,4 +1,2 @@
 // @flow
-import DomAlign from './DomAlign';
-
-export default DomAlign;
+export { default } from './DomAlign';

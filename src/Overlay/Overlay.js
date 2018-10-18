@@ -1,26 +1,25 @@
-/* eslint react/no-find-dom-node: 0 */
 // @flow
-
 import * as React from 'react';
-import omit from 'ramda/src/omit';
+import * as R from 'ramda';
 import PropTypes from 'prop-types';
-import { findDOMNode } from 'react-dom';
 import Transition from '../Transition';
 import Portal from '../Portal';
 import DomAlign from '../DomAlign';
 import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
 
-class Overlay extends React.Component<{
+type Props = {
   show: boolean,
-  children: any,
+  children: React.Node,
   onOutsideClick?: (e: any) => void,
-  target?: React.ElementRef<any>,
+  target: React.ElementRef<*>,
   alignConfig: Object,
   transitionConfig?: Object,
   resize?: boolean,
   style?: Object,
-}> {
+};
+
+class Overlay extends React.Component<Props> {
   static propTypes = {
     show: PropTypes.bool,
     children: PropTypes.node.isRequired,
@@ -30,6 +29,7 @@ class Overlay extends React.Component<{
     transitionConfig: PropTypes.object, // docs: https://github.com/react-component/tween-one
     resize: PropTypes.bool,
   };
+
   static defaultProps = {
     show: false,
     onOutsideClick: emptyFunction,
@@ -49,12 +49,13 @@ class Overlay extends React.Component<{
     },
     resize: false,
   };
-  onOutsideClick = (e: any) => {
-    const node = findDOMNode(this.props.target);
-    if (node && node.contains(e.target)) return; // Note: Omit clicking target.
 
-    if (this.props.onOutsideClick) {
-      this.props.onOutsideClick(e);
+  onOutsideClick = (e: any) => {
+    const { target, onOutsideClick } = this.props;
+    if (target.current && target.current.contains(e.target)) return; // Note: Omit clicking target.
+
+    if (onOutsideClick) {
+      onOutsideClick(e);
     }
   };
 
@@ -82,7 +83,7 @@ class Overlay extends React.Component<{
             >
               <div
                 style={{ position: 'absolute', ...style }}
-                {...omit(['onOutsideClick'])(otherProps)}
+                {...R.omit(['onOutsideClick'])(otherProps)}
               >
                 <Transition {...transitionConfig} component={false}>
                   {children}

@@ -22,7 +22,7 @@ $ yarn add react-overlay-pack
 
 ## Demo
 
-* https://react-overlay-pack.netlify.com/
+- https://react-overlay-pack.netlify.com/
 
 ## Usage
 
@@ -48,7 +48,7 @@ type Props = {
 ```js
 import DomAlign from 'react-overlay-pack/lib/DomAlign';
 
-<div ref={target => { this.target = target; }}>
+<div ref={this.target}>
   Target node
 </div>
 
@@ -72,19 +72,14 @@ type Props = {
 };
 ```
 
-* `config`: https://github.com/yiminghe/dom-align#config-object-details
+- `config`: https://github.com/yiminghe/dom-align#config-object-details
 
 ### Overlay
 
 ```js
 import Overlay from 'react-overlay-pack/lib/Overlay';
 
-<span
-  ref={target => {
-    this.target = target;
-  }}
-  onClick={() => this.setState({ show: true })}
->
+<span ref={this.target} onClick={() => this.setState({ show: true })}>
   Target node
 </span>;
 
@@ -115,8 +110,8 @@ type Props = {
 };
 ```
 
-* `alignConfig`: https://github.com/yiminghe/dom-align#config-object-details
-* `transitionConfig`: https://github.com/react-component/tween-one
+- `alignConfig`: https://github.com/yiminghe/dom-align#config-object-details
+- `transitionConfig`: https://github.com/react-component/tween-one
 
 ### Dialog
 
@@ -141,8 +136,8 @@ type Props = {
 };
 ```
 
-* `backdropTransition`: https://github.com/react-component/tween-one
-* `containerTransition`: https://github.com/react-component/tween-one
+- `backdropTransition`: https://github.com/react-component/tween-one
+- `containerTransition`: https://github.com/react-component/tween-one
 
 ### [Portal](https://github.com/tajo/react-portal)
 
@@ -150,15 +145,15 @@ type Props = {
 
 ## Inspiration
 
-* https://github.com/react-bootstrap/react-overlays
+- https://github.com/react-bootstrap/react-overlays
 
 ## Development
 
 ### Requirements
 
-* node >= 9.8.0
-* yarn >= 1.5.1
-* react >= 16
+- node >= 10.12.0
+- yarn >= 1.10.1
+- react >= 16
 
 ```sh
 $ yarn install --pure-lockfile
@@ -179,9 +174,9 @@ $ yarn run build
 
 ## CONTRIBUTING
 
-* ⇄ Pull requests and ★ Stars are always welcome.
-* For bugs and feature requests, please create an issue.
-* Pull requests must be accompanied by passing automated tests.
+- ⇄ Pull requests and ★ Stars are always welcome.
+- For bugs and feature requests, please create an issue.
+- Pull requests must be accompanied by passing automated tests.
 
 ## [CHANGELOG](CHANGELOG.md)
 

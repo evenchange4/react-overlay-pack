@@ -7,19 +7,21 @@ import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
 import { BackdropContainer, Container } from './Components';
 
+export type Props = {
+  show: boolean,
+  children: React.Node,
+  onOutsideClick: Function,
+  backdropTransition?: Object,
+  containerTransition?: Object,
+};
+
 const Dialog = ({
   show,
   children,
   onOutsideClick,
   backdropTransition,
   containerTransition,
-}: {
-  show: boolean,
-  children: React.Node,
-  onOutsideClick: Function,
-  backdropTransition?: Object,
-  containerTransition?: Object,
-}) =>
+}: Props) =>
   show && (
     <React.Fragment>
       <Portal>

@@ -1,48 +1,60 @@
 /* global window */
-/* eslint react/no-find-dom-node: 0 */
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { findDOMNode } from 'react-dom';
 import domAlign from 'dom-align';
 import rafThrottle from 'raf-throttle';
 
-class DomAlign extends React.Component<
-  {
-    children: React.Element<any>,
-    config: Object, // docs: https://github.com/yiminghe/dom-align#config-object-details
-    target: React.ElementRef<any>,
-    resize?: boolean,
-  },
-  {
-    source: React.ElementRef<any>,
-  },
-> {
+export type Props = {
+  children: React.Node,
+  config: Object, // docs: https://github.com/yiminghe/dom-align#config-object-details
+  target: React.ElementRef<*>,
+  resize?: boolean,
+};
+
+class DomAlign extends React.Component<Props> {
   static propTypes = {
     children: PropTypes.element.isRequired,
     config: PropTypes.object.isRequired,
     target: PropTypes.object,
     resize: PropTypes.bool,
   };
+
   static defaultProps = {
     target: undefined,
     resize: false,
   };
-  state = { source: undefined };
+
+  source = React.createRef();
+
+  align = rafThrottle(() => {
+    const { target, config } = this.props;
+    const { source } = this;
+
+    if (target && source) {
+      // Note: Wait for two react instance ready.
+      domAlign(source.current, target.current, config);
+    }
+  });
+
   componentDidMount() {
+    const { resize } = this.props;
     this.align();
-    if (this.props.resize) {
+    if (resize) {
       window.addEventListener('resize', this.align);
       window.addEventListener('scroll', this.align);
       window.addEventListener('wheel', this.align);
     }
   }
+
   componentDidUpdate() {
     // TODO: make it async. there is a problem of overlay in dialog case.
     this.timeoutId = setTimeout(() => this.align());
   }
+
   componentWillUnmount() {
-    if (this.props.resize) {
+    const { resize } = this.props;
+    if (resize) {
       window.removeEventListener('resize', this.align);
       window.removeEventListener('scroll', this.align);
       window.removeEventListener('wheel', this.align);
@@ -50,25 +62,15 @@ class DomAlign extends React.Component<
     if (this.align && this.align.cancel) this.align.cancel();
     if (this.timeoutId) clearTimeout(this.timeoutId);
   }
-  onSourceRef = (source: React.ElementRef<any>) => {
-    this.setState({ source });
-  };
-  timeoutId: ?TimeoutID;
-  align = rafThrottle(() => {
-    const { target, config } = this.props;
-    const { source } = this.state;
 
-    if (target && source) {
-      // Note: Wait for two react instance ready.
-      domAlign(findDOMNode(source), findDOMNode(target), config);
-    }
-  });
+  timeoutId: ?TimeoutID;
+
   render() {
     const { children } = this.props;
-    const { onSourceRef } = this;
+    const { source } = this;
 
     return React.cloneElement(React.Children.only(children), {
-      ref: onSourceRef,
+      ref: source,
     });
   }
 }

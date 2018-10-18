@@ -7,25 +7,23 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import Overlay from '.';
 
-class BasicOverlay extends React.Component<
-  {},
-  {
-    show: boolean,
-    target?: React.ElementRef<any>,
-  },
-> {
-  state = { show: true, target: undefined };
-  onMouseEnter = () => this.setState({ show: !this.state.show });
+class BasicOverlay extends React.Component<{}, { show: boolean }> {
+  state = { show: true };
+
+  target = React.createRef();
+
+  onMouseEnter = () => this.setState(({ show }) => ({ show: !show }));
+
   onHide = () => this.setState({ show: false });
-  onTargetRef = target => this.setState({ target });
+
   render() {
-    const { show, target } = this.state;
-    const { onMouseEnter, onHide, onTargetRef } = this;
+    const { show } = this.state;
+    const { onMouseEnter, onHide, target } = this;
 
     return (
       <div>
         <span
-          ref={onTargetRef}
+          ref={target}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onHide}
           style={{ backgroundColor: 'antiquewhite' }}
@@ -43,25 +41,23 @@ class BasicOverlay extends React.Component<
   }
 }
 
-class MenuOverlay extends React.Component<
-  {},
-  {
-    show: boolean,
-    target?: React.ElementRef<any>,
-  },
-> {
-  state = { show: false, target: undefined };
-  onClick = () => this.setState({ show: !this.state.show });
+class MenuOverlay extends React.Component<{}, { show: boolean }> {
+  state = { show: false };
+
+  target = React.createRef();
+
+  onClick = () => this.setState(({ show }) => ({ show: !show }));
+
   onHide = () => this.setState({ show: false });
-  onTargetRef = target => this.setState({ target });
+
   render() {
-    const { show, target } = this.state;
-    const { onClick, onHide, onTargetRef } = this;
+    const { show } = this.state;
+    const { onClick, onHide, target } = this;
 
     return (
       <div>
         <div
-          ref={onTargetRef}
+          ref={target}
           onClick={onClick}
           onKeyPress={onClick}
           style={{ backgroundColor: 'antiquewhite' }}
