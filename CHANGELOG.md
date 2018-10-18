@@ -1,10 +1,23 @@
 ## Change Log
 
+### upcoming (2018/10/18 07:31 +00:00)
+
+- [5d54289](https://github.com/evenchange4/react-overlay-pack/commit/5d54289aaa09dca70f7bc9059abe81cdaa76e1b8) chore(npm): remove prepublish script (@evenchange4)
+
+### v3.0.0 (2018/10/18 04:12 +00:00)
+
+- [a8eb0b4](https://github.com/evenchange4/react-overlay-pack/commit/a8eb0b4fccb0258c6e12515a548cb6b6eebe9a4a) chore(travis): fix npm key (@evenchange4)
+- [af4197e](https://github.com/evenchange4/react-overlay-pack/commit/af4197e69c879bb9ba1c5596be264d45a218009e) 3.0.0 (@evenchange4)
+- [f3d4f6a](https://github.com/evenchange4/react-overlay-pack/commit/f3d4f6a05442dfafa7598d284803c2cf734c2277) chore: upgrade storybook (@evenchange4)
+- [512b303](https://github.com/evenchange4/react-overlay-pack/commit/512b303077d3f4cc2b02de5ae186cae06a90f19e) refactor: user react.createRef api [BREAKING](@evenchange4)
+- [#28](https://github.com/evenchange4/react-overlay-pack/pull/28) chore(deps): update dependency eslint-plugin-jest to v21.14.1 (#28) (@renovate[bot])
+- [8f8be7e](https://github.com/evenchange4/react-overlay-pack/commit/8f8be7ee66535c465f8ee349ae85e9b45525d5c0) docs(CHANGELOG): release 2.0.0 (@evenchange4)
+
 ### v2.0.0 (2018/03/13 05:41 +00:00)
 
 - [a5b1638](https://github.com/evenchange4/react-overlay-pack/commit/a5b163882b754419060a13c1db6d4fe63651c878) 2.0.0 (@evenchange4)
-- [4408512](https://github.com/evenchange4/react-overlay-pack/commit/4408512711965a20b4bf3903f7b62a6a940ce24e) chore: ncu update & flow-typed update & upgrade node 9.8.0 and yarn 1.5.1 (@evenchange4)
 - [2e6c6df](https://github.com/evenchange4/react-overlay-pack/commit/2e6c6dfa4b283dec543a03707e2bb8933f457dcc) feat(Dialog, Overlay): add show props [BREAKING CHANGES](@evenchange4)
+- [4408512](https://github.com/evenchange4/react-overlay-pack/commit/4408512711965a20b4bf3903f7b62a6a940ce24e) chore: ncu update & flow-typed update & upgrade node 9.8.0 and yarn 1.5.1 (@evenchange4)
 - [e0c981f](https://github.com/evenchange4/react-overlay-pack/commit/e0c981f352f76e06d4db5f0acb45d974a17d9f98) docs(CHANGELOG): release 1.0.5 (@evenchange4)
 
 ### v1.0.5 (2018/02/08 07:14 +00:00)
