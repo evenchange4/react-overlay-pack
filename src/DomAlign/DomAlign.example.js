@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import DomAlign from './DomAlign';
 
 class Component extends React.Component<{
@@ -34,35 +33,41 @@ class Component extends React.Component<{
 storiesOf('DomAlign', module)
   .add(
     'API',
-    withInfo({
-      text: `
-      This is a dom-align integration component.
-
-      API Reference: https://github.com/yiminghe/dom-align
-    `,
-      inline: true,
-      propTables: [DomAlign],
-    })(() => (
+    () => (
       <Component
         config={{
           points: ['tl', 'bl'], // bottom-right
           offset: [10, 10],
         }}
       />
-    )),
+    ),
+    {
+      info: {
+        text: `
+      This is a dom-align integration component.
+
+      API Reference: https://github.com/yiminghe/dom-align
+    `,
+        inline: true,
+        propTables: [DomAlign],
+      },
+    },
   )
   .add(
     'Center',
-    withInfo({
-      text: 'TopCenter <~ BottomLeft',
-      inline: true,
-      propTables: [DomAlign],
-    })(() => (
+    () => (
       <Component
         config={{
           points: ['bl', 'tc'],
           offset: [5, 0],
         }}
       />
-    )),
+    ),
+    {
+      info: {
+        text: 'TopCenter <~ BottomLeft',
+        inline: true,
+        propTables: [DomAlign],
+      },
+    },
   );

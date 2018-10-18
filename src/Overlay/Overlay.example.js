@@ -3,7 +3,6 @@
 
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import Overlay from '.';
 
@@ -88,21 +87,20 @@ class MenuOverlay extends React.Component<{}, { show: boolean }> {
 storiesOf('Overlay', module)
   .add(
     'Basic',
-    withInfo({
-      text: 'state = { show: true }',
-      inline: true,
-      propTables: [Overlay],
-    })(() => (
+    () => (
       <BasicOverlay alignConfig={{ points: ['cl', 'cr'], offset: [5, 0] }} />
-    )),
+    ),
+    {
+      info: {
+        text: 'state = { show: true }',
+        inline: true,
+        propTables: [Overlay],
+      },
+    },
   )
   .add(
     'Dropdown',
-    withInfo({
-      text: 'With onHide function for rootClose',
-      inline: true,
-      propTables: [Overlay],
-    })(() => (
+    () => (
       <div
         style={{
           display: 'flex',
@@ -150,5 +148,12 @@ storiesOf('Overlay', module)
           }}
         />
       </div>
-    )),
+    ),
+    {
+      info: {
+        text: 'With onHide function for rootClose',
+        inline: true,
+        propTables: [Overlay],
+      },
+    },
   );

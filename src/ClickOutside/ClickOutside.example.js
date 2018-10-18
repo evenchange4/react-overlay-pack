@@ -2,17 +2,12 @@
 
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import ClickOutside from '.';
 
 storiesOf('ClickOutside', module).add(
   'API',
-  withInfo({
-    text: '',
-    inline: true,
-    propTables: [ClickOutside],
-  })(() => (
+  () => (
     <ClickOutside onClick={action('ClickOutside')}>
       <div
         style={{
@@ -26,5 +21,12 @@ storiesOf('ClickOutside', module).add(
         {'(Press [cmd+d] to open action logger.)'}
       </div>
     </ClickOutside>
-  )),
+  ),
+  {
+    info: {
+      text: '',
+      inline: true,
+      propTables: [ClickOutside],
+    },
+  },
 );

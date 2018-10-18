@@ -13,7 +13,10 @@ initStoryshots({
     const converter = new Stories2SnapsConverter();
     const snapshotFileName = converter.getSnapshotFileName(context);
     const storyElement = story.render(context);
-    const tree = mount(storyElement);
+    const tree = mount(storyElement)
+      .find('#snapshot')
+      .children()
+      .first();
     const json = toJson(tree);
 
     if (snapshotFileName) {

@@ -2,7 +2,6 @@
 // @flow
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import Dialog from '.';
 import Overlay from '../Overlay';
@@ -106,21 +105,16 @@ class StatefulDialog extends React.Component<
 }
 
 storiesOf('Dialog', module)
-  .add(
-    'API',
-    withInfo({
+  .add('API', () => <StatefulDialog />, {
+    info: {
       text: 'Basic',
       inline: true,
       propTables: [Dialog],
-    })(() => <StatefulDialog />),
-  )
+    },
+  })
   .add(
     'Custom transition',
-    withInfo({
-      text: 'with containerTransition props',
-      inline: true,
-      propTables: [Dialog],
-    })(() => (
+    () => (
       <StatefulDialog
         containerTransition={{
           style: {
@@ -134,5 +128,12 @@ storiesOf('Dialog', module)
           },
         }}
       />
-    )),
+    ),
+    {
+      info: {
+        text: 'with containerTransition props',
+        inline: true,
+        propTables: [Dialog],
+      },
+    },
   );
