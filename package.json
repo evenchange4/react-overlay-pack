@@ -13,7 +13,6 @@
     "prebuild": "npm run clean",
     "build": "nwb build-react-component",
     "build-storybook": "build-storybook",
-    "prepublishOnly": "npm run clean && npm run build",
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "start": "start-storybook -p 6006",
