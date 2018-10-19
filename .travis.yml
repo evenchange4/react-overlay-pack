@@ -7,6 +7,9 @@ env:
   global:
     - YARN_VERSION=1.10.1
 
+install:
+  - yarn install --pure-lockfile
+
 before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
   - |
@@ -18,11 +21,11 @@ script:
   - yarn run eslint
   - yarn run test
   - yarn run flow
+  - mv coverage coverage-upload # Note: it will be removed when nwb build
   - yarn run build
-  - yarn run build-storybook
 
 after_success:
-  - ./node_modules/.bin/codecov
+  - ./node_modules/.bin/codecov -f ./coverage-upload/clover.xml
 
 deploy:
   - provider: npm

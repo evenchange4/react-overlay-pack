@@ -90,7 +90,6 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
-    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/**/*.test.js",
