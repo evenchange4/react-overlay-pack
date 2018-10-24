@@ -29,7 +29,7 @@ $ yarn add react-overlay-pack
 ### ClickOutside
 
 ```js
-import ClickOutside from 'react-overlay-pack/lib/ClickOutside';
+import { ClickOutside } from 'react-overlay-pack';
 
 <ClickOutside onClick={e => console.log(e)}>
   <div>content</div>
@@ -46,7 +46,7 @@ type Props = {
 ### DomAlign
 
 ```js
-import DomAlign from 'react-overlay-pack/lib/DomAlign';
+import { DomAlign } from 'react-overlay-pack';
 
 <div ref={this.target}>
   Target node
@@ -77,7 +77,7 @@ type Props = {
 ### Overlay
 
 ```js
-import Overlay from 'react-overlay-pack/lib/Overlay';
+import { Overlay } from 'react-overlay-pack';
 
 <span ref={this.target} onClick={() => this.setState({ show: true })}>
   Target node
@@ -116,7 +116,7 @@ type Props = {
 ### Dialog
 
 ```js
-import Dialog from 'react-overlay-pack/lib/Dialog';
+import { Dialog } from 'react-overlay-pack';
 
 <Dialog
   show={this.state.show}
@@ -151,7 +151,7 @@ type Props = {
 
 ### Requirements
 
-- node >= 10.12.0
+- node >= 11.0.0
 - yarn >= 1.10.1
 - react >= 16
 
