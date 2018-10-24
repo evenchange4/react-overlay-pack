@@ -1,7 +1,16 @@
 ## Change Log
 
-### upcoming (2018/10/18 07:31 +00:00)
+### v3.0.1 (2018/10/24 03:45 +00:00)
 
+- [da480d0](https://github.com/evenchange4/react-overlay-pack/commit/da480d045ad00f13a3be28bd0295439241833f54) 3.0.1 (@evenchange4)
+- [6112c26](https://github.com/evenchange4/react-overlay-pack/commit/6112c26ec329fc145287b77cacb2d53f24ce92a5) chore: introduce flow-copy-source (@evenchange4)
+- [#54](https://github.com/evenchange4/react-overlay-pack/pull/54) chore(deps): update react monorepo to v16.6.0 (#54) (@renovate[bot])
+- [#53](https://github.com/evenchange4/react-overlay-pack/pull/53) chore(deps): update storybook monorepo to v4.0.0-rc.3 (#53) (@renovate[bot])
+- [#52](https://github.com/evenchange4/react-overlay-pack/pull/52) chore(deps): update dependency eslint-plugin-jest to v21.26.0 (#52) (@renovate[bot])
+- [#51](https://github.com/evenchange4/react-overlay-pack/pull/51) chore(deps): update storybook monorepo to v4.0.0-rc.2 (#51) (@renovate[bot])
+- [8bca194](https://github.com/evenchange4/react-overlay-pack/commit/8bca1944f94148d1d308485ae48cb872988a3413) fix: add coverage flag of jest for codecov (@evenchange4)
+- [7122160](https://github.com/evenchange4/react-overlay-pack/commit/7122160657950e2d998f8c9309ed301d6b8fd874) fix: add coverage flag of jest for codecov (@evenchange4)
+- [109bbdc](https://github.com/evenchange4/react-overlay-pack/commit/109bbdc0d09e76ac873ee64fef1d5ca881c28e32) docs(CHANGELOG): add 3.0.0 release notes (@evenchange4)
 - [5d54289](https://github.com/evenchange4/react-overlay-pack/commit/5d54289aaa09dca70f7bc9059abe81cdaa76e1b8) chore(npm): remove prepublish script (@evenchange4)
 
 ### v3.0.0 (2018/10/18 04:12 +00:00)
@@ -16,8 +25,8 @@
 ### v2.0.0 (2018/03/13 05:41 +00:00)
 
 - [a5b1638](https://github.com/evenchange4/react-overlay-pack/commit/a5b163882b754419060a13c1db6d4fe63651c878) 2.0.0 (@evenchange4)
-- [2e6c6df](https://github.com/evenchange4/react-overlay-pack/commit/2e6c6dfa4b283dec543a03707e2bb8933f457dcc) feat(Dialog, Overlay): add show props [BREAKING CHANGES](@evenchange4)
 - [4408512](https://github.com/evenchange4/react-overlay-pack/commit/4408512711965a20b4bf3903f7b62a6a940ce24e) chore: ncu update & flow-typed update & upgrade node 9.8.0 and yarn 1.5.1 (@evenchange4)
+- [2e6c6df](https://github.com/evenchange4/react-overlay-pack/commit/2e6c6dfa4b283dec543a03707e2bb8933f457dcc) feat(Dialog, Overlay): add show props [BREAKING CHANGES](@evenchange4)
 - [e0c981f](https://github.com/evenchange4/react-overlay-pack/commit/e0c981f352f76e06d4db5f0acb45d974a17d9f98) docs(CHANGELOG): release 1.0.5 (@evenchange4)
 
 ### v1.0.5 (2018/02/08 07:14 +00:00)
