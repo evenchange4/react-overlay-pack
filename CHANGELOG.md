@@ -1,5 +1,13 @@
 ## Change Log
 
+### v3.0.2 (2018/10/31 12:46 +00:00)
+
+- [706cf3b](https://github.com/evenchange4/react-overlay-pack/commit/706cf3b795bdf9af803e83000406e26bd635cd69) 3.0.2 (@evenchange4)
+- [#62](https://github.com/evenchange4/react-overlay-pack/pull/62) chore: add missing sideEffects for webpack & ncu update flow (#62) (@evenchange4)
+- [#55](https://github.com/evenchange4/react-overlay-pack/pull/55) chore(deps): update dependency eslint-plugin-jest to v21.26.1 (#55) (@renovate[bot])
+- [2259137](https://github.com/evenchange4/react-overlay-pack/commit/225913761d2f3f1e36f8f8300cda3d4647e92ac7) chore: use node 11 & update docs (@evenchange4)
+- [68fd190](https://github.com/evenchange4/react-overlay-pack/commit/68fd1904d14bbf16148c5110ce33f1a1d6aabbf0) docs(CHANGELOG): release 3.0.1 (@evenchange4)
+
 ### v3.0.1 (2018/10/24 03:45 +00:00)
 
 - [da480d0](https://github.com/evenchange4/react-overlay-pack/commit/da480d045ad00f13a3be28bd0295439241833f54) 3.0.1 (@evenchange4)
