@@ -1,6 +1,9 @@
 [ignore]
 .*/node_modules/.*
 
+<PROJECT_ROOT>/lib/.*
+<PROJECT_ROOT>/es/.*
+
 [include]
 
 [libs]
