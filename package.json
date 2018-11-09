@@ -22,7 +22,7 @@
     "eslint": "eslint ./",
     "flow": "flow",
     "precommit": "lint-staged",
-    "format": "prettier --write '**/*.{js,json,md}' '*.{json,md,js}'",
+    "format": "prettier --write '**/*.{js,json,md,css,yaml,yml}' '*.{js,json,md,css,yaml,yml}'",
     "changelog": "github-changes -o evenchange4 -r react-overlay-pack -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
@@ -34,17 +34,17 @@
     "react-portal": "^4.1.5"
   },
   "devDependencies": {
-    "@babel/core": "7.1.2",
+    "@babel/core": "7.1.5",
     "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/preset-env": "7.1.0",
+    "@babel/preset-env": "7.1.5",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
-    "@storybook/addon-actions": "4.0.2",
-    "@storybook/addon-info": "4.0.2",
-    "@storybook/addon-links": "4.0.2",
-    "@storybook/addon-options": "4.0.2",
-    "@storybook/addon-storyshots": "4.0.2",
-    "@storybook/react": "4.0.2",
+    "@storybook/addon-actions": "4.0.4",
+    "@storybook/addon-info": "4.0.4",
+    "@storybook/addon-links": "4.0.4",
+    "@storybook/addon-options": "4.0.4",
+    "@storybook/addon-storyshots": "4.0.4",
+    "@storybook/react": "4.0.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
@@ -52,14 +52,14 @@
     "babel-plugin-require-context-hook": "1.0.0",
     "codecov": "3.1.0",
     "enzyme": "3.7.0",
-    "enzyme-adapter-react-16": "1.6.0",
+    "enzyme-adapter-react-16": "1.7.0",
     "enzyme-to-json": "3.3.4",
     "eslint": "5.8.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "3.1.0",
     "eslint-plugin-flowtype": "3.2.0",
     "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jest": "21.26.2",
+    "eslint-plugin-jest": "22.0.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
@@ -70,10 +70,10 @@
     "jest": "23.6.0",
     "lint-staged": "8.0.4",
     "nwb": "0.23.0",
-    "prettier": "1.14.3",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
-    "react-test-renderer": "16.6.0"
+    "prettier": "1.15.1",
+    "react": "16.6.1",
+    "react-dom": "16.6.1",
+    "react-test-renderer": "16.6.1"
   },
   "babel": {
     "env": {
@@ -111,7 +111,7 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.{js,json,md,css,yaml,yml}": [
       "prettier --write",
       "git add"
     ]
