@@ -31,7 +31,7 @@ class DomAlign extends React.Component<Props> {
     const { target, config } = this.props;
     const { source } = this;
 
-    if (target && source) {
+    if (target && target.current && source && source.current) {
       // Note: Wait for two react instance ready.
       domAlign(source.current, target.current, config);
     }
