@@ -1,5 +1,15 @@
 ## Change Log
 
+### v3.0.3 (2018/11/13 08:43 +00:00)
+
+- [34a6de9](https://github.com/evenchange4/react-overlay-pack/commit/34a6de98b23fa2249b9b1c0b689f65ee75111040) 3.0.3 (@evenchange4)
+- [#79](https://github.com/evenchange4/react-overlay-pack/pull/79) fix(DomAlign): fix ref current undefined problem (#79) (@evenchange4)
+- [#73](https://github.com/evenchange4/react-overlay-pack/pull/73) chore(deps): update dependency flow-bin to v0.86.0 (#73) (@renovate[bot])
+- [#74](https://github.com/evenchange4/react-overlay-pack/pull/74) chore: ncu update & use node 11.1.0 (#74) (@evenchange4)
+- [#63](https://github.com/evenchange4/react-overlay-pack/pull/63) chore(deps): update dependency eslint-plugin-flowtype to v3.2.0 (#63) (@renovate[bot])
+- [#64](https://github.com/evenchange4/react-overlay-pack/pull/64) chore(deps): update dependency husky to v1.1.3 (#64) (@renovate[bot])
+- [6b3e47b](https://github.com/evenchange4/react-overlay-pack/commit/6b3e47b8f1df056d5434f7d02a92c9fcb2abf14e) docs(CHANGELOG): release 3.0.2 (@evenchange4)
+
 ### v3.0.2 (2018/10/31 12:46 +00:00)
 
 - [706cf3b](https://github.com/evenchange4/react-overlay-pack/commit/706cf3b795bdf9af803e83000406e26bd635cd69) 3.0.2 (@evenchange4)
