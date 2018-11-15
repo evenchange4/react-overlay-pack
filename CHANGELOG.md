@@ -1,5 +1,11 @@
 ## Change Log
 
+### v3.0.4 (2018/11/15 02:14 +00:00)
+
+- [fa955f2](https://github.com/evenchange4/react-overlay-pack/commit/fa955f2cfa09dc532c982e5dbb6ceeb290508fce) 3.0.4 (@evenchange4)
+- [#83](https://github.com/evenchange4/react-overlay-pack/pull/83) chore: ncu update & fix har-validator problem (#83) (@evenchange4)
+- [8188863](https://github.com/evenchange4/react-overlay-pack/commit/8188863d0c8b7ceb142c15cd01e75095fb6cd94e) docs(CHANGELOG): release 3.0.3 (@evenchange4)
+
 ### v3.0.3 (2018/11/13 08:43 +00:00)
 
 - [34a6de9](https://github.com/evenchange4/react-overlay-pack/commit/34a6de98b23fa2249b9b1c0b689f65ee75111040) 3.0.3 (@evenchange4)
