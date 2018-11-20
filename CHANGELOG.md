@@ -1,5 +1,11 @@
 ## Change Log
 
+### v3.0.5 (2018/11/20 08:38 +00:00)
+
+- [4066c7a](https://github.com/evenchange4/react-overlay-pack/commit/4066c7a29f5dec728bde5019a5a85a1b33e91a74) 3.0.5 (@evenchange4)
+- [fdceb34](https://github.com/evenchange4/react-overlay-pack/commit/fdceb342dc67f4ebff6d7e42c802f19993f8e36a) chore: use esmodule & ncu update & use node 11.2.0 (@evenchange4)
+- [144e2ff](https://github.com/evenchange4/react-overlay-pack/commit/144e2ff37fb8330dbb23f201478feb0394bba519) docs(CHANGELOG): release 3.0.4 (@evenchange4)
+
 ### v3.0.4 (2018/11/15 02:14 +00:00)
 
 - [fa955f2](https://github.com/evenchange4/react-overlay-pack/commit/fa955f2cfa09dc532c982e5dbb6ceeb290508fce) 3.0.4 (@evenchange4)
