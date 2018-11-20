@@ -1,5 +1,4 @@
 // @flow
-// $FlowFixMe
-import Portal from 'react-portal/lib/Portal';
+import { Portal } from 'react-portal';
 
 export default Portal;

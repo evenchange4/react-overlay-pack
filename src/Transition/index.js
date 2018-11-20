@@ -1,4 +1,4 @@
 // @flow
-import transition from 'rc-tween-one/lib/TweenOne';
+import TweenOne from 'rc-tween-one';
 
-export default transition;
+export default TweenOne;
