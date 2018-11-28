@@ -25,17 +25,20 @@ class DomAlign extends React.Component<Props> {
     resize: false,
   };
 
-  source = React.createRef();
+  constructor(props: Props) {
+    super(props);
 
-  align = rafThrottle(() => {
-    const { target, config } = this.props;
-    const { source } = this;
+    this.source = React.createRef();
+    this.align = rafThrottle(() => {
+      const { target, config } = this.props;
+      const { source } = this;
 
-    if (target && target.current && source && source.current) {
-      // Note: Wait for two react instance ready.
-      domAlign(source.current, target.current, config);
-    }
-  });
+      if (target && target.current && source && source.current) {
+        // Note: Wait for two react instance ready.
+        domAlign(source.current, target.current, config);
+      }
+    });
+  }
 
   componentDidMount() {
     const { resize } = this.props;
@@ -64,6 +67,10 @@ class DomAlign extends React.Component<Props> {
   }
 
   timeoutId: ?TimeoutID;
+
+  source: { current: null | React.ElementRef<any> };
+
+  align: () => void;
 
   render() {
     const { children } = this.props;
