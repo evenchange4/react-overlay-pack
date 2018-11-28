@@ -1,5 +1,11 @@
 ## Change Log
 
+### v3.0.6 (2018/11/28 07:24 +00:00)
+
+- [371779e](https://github.com/evenchange4/react-overlay-pack/commit/371779eded8238c54f76c47a5d1a9a4a605eccd0) 3.0.6 (@evenchange4)
+- [6b13dd8](https://github.com/evenchange4/react-overlay-pack/commit/6b13dd8187d0c710c4ff19d67c6ced35380ce45b) fix(flow): ncu update & fix flow type (@evenchange4)
+- [58dff36](https://github.com/evenchange4/react-overlay-pack/commit/58dff36c3ba5a41370bc8a32defd2b47dae1b340) docs(CHANGELOG): release 3.0.5 (@evenchange4)
+
 ### v3.0.5 (2018/11/20 08:38 +00:00)
 
 - [4066c7a](https://github.com/evenchange4/react-overlay-pack/commit/4066c7a29f5dec728bde5019a5a85a1b33e91a74) 3.0.5 (@evenchange4)
