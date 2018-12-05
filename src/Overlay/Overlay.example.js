@@ -60,6 +60,8 @@ class MenuOverlay extends React.Component<{}, { show: boolean }> {
           onClick={onClick}
           onKeyPress={onClick}
           style={{ backgroundColor: 'antiquewhite' }}
+          role="button"
+          tabIndex="0"
         >
           Click me
         </div>
@@ -71,10 +73,20 @@ class MenuOverlay extends React.Component<{}, { show: boolean }> {
           {...this.props}
         >
           <div key="menu" style={{ width: 300, backgroundColor: 'aliceblue' }}>
-            <div onClick={action('click 1')} onKeyPress={action('click 1')}>
+            <div
+              onClick={action('click 1')}
+              onKeyPress={action('click 1')}
+              role="button"
+              tabIndex="0"
+            >
               Item 1
             </div>
-            <div onClick={action('click 2')} onKeyPress={action('click 2')}>
+            <div
+              onClick={action('click 2')}
+              onKeyPress={action('click 2')}
+              role="button"
+              tabIndex="0"
+            >
               Item 2
             </div>
           </div>

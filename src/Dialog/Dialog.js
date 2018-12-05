@@ -43,8 +43,14 @@ Dialog.propTypes = {
   show: PropTypes.bool,
   children: PropTypes.node.isRequired,
   onOutsideClick: PropTypes.func,
-  backdropTransition: PropTypes.any,
-  containerTransition: PropTypes.any,
+  backdropTransition: PropTypes.shape({
+    style: PropTypes.object,
+    animation: PropTypes.object,
+  }),
+  containerTransition: PropTypes.shape({
+    style: PropTypes.object,
+    animation: PropTypes.object,
+  }),
 };
 Dialog.defaultProps = {
   show: false,

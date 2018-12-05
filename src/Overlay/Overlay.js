@@ -24,9 +24,15 @@ class Overlay extends React.Component<Props> {
     show: PropTypes.bool,
     children: PropTypes.node.isRequired,
     onOutsideClick: PropTypes.func, // Note: for root close
-    target: PropTypes.object,
-    alignConfig: PropTypes.object, // docs: https://github.com/yiminghe/dom-align#alignconfig-object-details
-    transitionConfig: PropTypes.object, // docs: https://github.com/react-component/tween-one
+    target: PropTypes.object, // eslint-disable-line
+    alignConfig: PropTypes.shape({
+      points: PropTypes.array,
+      offset: PropTypes.array,
+    }), // docs: https://github.com/yiminghe/dom-align#alignconfig-object-details
+    transitionConfig: PropTypes.shape({
+      style: PropTypes.object,
+      animation: PropTypes.object,
+    }), // docs: https://github.com/react-component/tween-one
     resize: PropTypes.bool,
   };
 

@@ -189,11 +189,13 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       <div
         onClick={[Function]}
         onKeyPress={[Function]}
+        role="button"
         style={
           Object {
             "backgroundColor": "antiquewhite",
           }
         }
+        tabIndex="0"
       >
         Click me
       </div>
@@ -215,7 +217,10 @@ exports[`Storyshots Overlay Dropdown 1`] = `
         show={false}
         target={
           Object {
-            "current": <div>
+            "current": <div
+              role="button"
+              tabindex="0"
+            >
               Click me
             </div>,
           }
@@ -266,11 +271,13 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       <div
         onClick={[Function]}
         onKeyPress={[Function]}
+        role="button"
         style={
           Object {
             "backgroundColor": "antiquewhite",
           }
         }
+        tabIndex="0"
       >
         Click me
       </div>
@@ -292,7 +299,10 @@ exports[`Storyshots Overlay Dropdown 1`] = `
         show={false}
         target={
           Object {
-            "current": <div>
+            "current": <div
+              role="button"
+              tabindex="0"
+            >
               Click me
             </div>,
           }
@@ -343,11 +353,13 @@ exports[`Storyshots Overlay Dropdown 1`] = `
       <div
         onClick={[Function]}
         onKeyPress={[Function]}
+        role="button"
         style={
           Object {
             "backgroundColor": "antiquewhite",
           }
         }
+        tabIndex="0"
       >
         Click me
       </div>
@@ -369,7 +381,10 @@ exports[`Storyshots Overlay Dropdown 1`] = `
         show={false}
         target={
           Object {
-            "current": <div>
+            "current": <div
+              role="button"
+              tabindex="0"
+            >
               Click me
             </div>,
           }
