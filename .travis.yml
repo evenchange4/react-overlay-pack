@@ -24,7 +24,7 @@ script:
   - yarn run build
 
 after_success:
-  - ./node_modules/.bin/codecov -f ./coverage-upload/clover.xml
+  - ./node_modules/.bin/codecov
 
 deploy:
   - provider: npm
