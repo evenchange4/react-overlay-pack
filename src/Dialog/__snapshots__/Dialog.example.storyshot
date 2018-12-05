@@ -6,11 +6,13 @@ exports[`Storyshots Dialog API 1`] = `
     <span
       onClick={[Function]}
       onKeyPress={[Function]}
+      role="button"
       style={
         Object {
           "backgroundColor": "antiquewhite",
         }
       }
+      tabIndex="0"
     >
       Open dialog
     </span>
@@ -68,11 +70,13 @@ exports[`Storyshots Dialog Custom transition 1`] = `
     <span
       onClick={[Function]}
       onKeyPress={[Function]}
+      role="button"
       style={
         Object {
           "backgroundColor": "antiquewhite",
         }
       }
+      tabIndex="0"
     >
       Open dialog
     </span>

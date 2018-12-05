@@ -15,8 +15,11 @@ export type Props = {
 class DomAlign extends React.Component<Props> {
   static propTypes = {
     children: PropTypes.element.isRequired,
-    config: PropTypes.object.isRequired,
-    target: PropTypes.object,
+    config: PropTypes.shape({
+      points: PropTypes.array,
+      offset: PropTypes.array,
+    }),
+    target: PropTypes.object, // eslint-disable-line
     resize: PropTypes.bool,
   };
 
