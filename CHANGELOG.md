@@ -1,5 +1,12 @@
 ## Change Log
 
+### v3.0.8 (2018/12/06 06:25 +00:00)
+
+- [4690e79](https://github.com/evenchange4/react-overlay-pack/commit/4690e790205aad98b0583a5582388f779d74c115) 3.0.8 (@evenchange4)
+- [#103](https://github.com/evenchange4/react-overlay-pack/pull/103) refactor(flow): use hsu-scripts flow (#103) (@evenchange4)
+- [#100](https://github.com/evenchange4/react-overlay-pack/pull/100) chore(deps): update dependency hsu-scripts to v0.1.1 (#100) (@renovate[bot])
+- [918c4e3](https://github.com/evenchange4/react-overlay-pack/commit/918c4e35cd1d3d26b0808d049a69f8b7b60248c2) docs(CHANGELOG): release 3.0.7 (@evenchange4)
+
 ### v3.0.7 (2018/12/05 07:23 +00:00)
 
 - [17fc608](https://github.com/evenchange4/react-overlay-pack/commit/17fc6082e3a442d9432acff56450609e4e38f600) 3.0.7 (@evenchange4)
