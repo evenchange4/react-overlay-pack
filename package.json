@@ -1,6 +1,6 @@
 {
   "name": "react-overlay-pack",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "typings": "./index.d.ts",
   "main": "lib/index.js",
   "module": "es/index.js",
