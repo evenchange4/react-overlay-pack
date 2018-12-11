@@ -12,7 +12,7 @@ export type Props = {
   resize?: boolean,
 };
 
-class DomAlign extends React.Component<Props> {
+class DomAlign extends React.PureComponent<Props> {
   static propTypes = {
     children: PropTypes.element.isRequired,
     config: PropTypes.shape({

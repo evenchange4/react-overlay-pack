@@ -11,7 +11,7 @@ export type Props = {
   onClick: (e: any) => void,
 };
 
-class ClickOutside extends React.Component<Props> {
+class ClickOutside extends React.PureComponent<Props> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired,
