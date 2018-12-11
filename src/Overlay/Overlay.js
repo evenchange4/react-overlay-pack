@@ -19,7 +19,7 @@ type Props = {
   style?: Object,
 };
 
-class Overlay extends React.Component<Props> {
+class Overlay extends React.PureComponent<Props> {
   static propTypes = {
     show: PropTypes.bool,
     children: PropTypes.node.isRequired,
