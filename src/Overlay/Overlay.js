@@ -8,7 +8,7 @@ import DomAlign from '../DomAlign';
 import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
 
-type Props = {
+export type Props = {
   show: boolean,
   children: React.Node,
   onOutsideClick?: (e: any) => void,
