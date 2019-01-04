@@ -14,6 +14,23 @@ export const Container = (props: { children?: React.Node }) => (
       alignItems: 'center',
       flexDirection: 'column',
       overflow: 'auto',
+      pointerEvents: 'none',
+    }}
+  />
+);
+
+export const Content = ({
+  style,
+  ...otherProps
+}: {
+  style?: Object,
+  children?: React.Node,
+}) => (
+  <div
+    {...otherProps}
+    style={{
+      pointerEvents: 'all',
+      ...style,
     }}
   />
 );
