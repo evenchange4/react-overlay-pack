@@ -19,22 +19,6 @@ export const Container = (props: { children?: React.Node }) => (
   />
 );
 
-export const Content = ({
-  style,
-  ...otherProps
-}: {
-  style?: Object,
-  children?: React.Node,
-}) => (
-  <div
-    {...otherProps}
-    style={{
-      pointerEvents: 'all',
-      ...style,
-    }}
-  />
-);
-
 export const BackdropContainer = ({
   style,
   ...otherProps

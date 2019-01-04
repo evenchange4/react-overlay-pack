@@ -1,14 +1,15 @@
 // @flow
 import * as React from 'react';
+import * as R from 'ramda';
 import PropTypes from 'prop-types';
 import Portal from '../Portal';
 import Transition from '../Transition';
 import emptyFunction from '../utils/emptyFunction';
-import { BackdropContainer, Container, Content } from './Components';
+import { BackdropContainer, Container } from './Components';
 
 export type Props = {
   show: boolean,
-  children: React.Node,
+  children: React.Element<any>,
   onOutsideClick: Function,
   backdropTransition?: Object,
   containerTransition?: Object,
@@ -27,11 +28,16 @@ const Dialog = ({
         <Transition component={false} {...backdropTransition}>
           <BackdropContainer onClick={onOutsideClick} />
         </Transition>
-      </Portal>
-      <Portal>
+
         <Container>
           <Transition component={false} {...containerTransition}>
-            <Content>{children}</Content>
+            {/* TODO: a better way to merge child style */}
+            {React.cloneElement(children, {
+              style: {
+                pointerEvents: 'all',
+                ...R.path(['props', 'style'], children),
+              },
+            })}
           </Transition>
         </Container>
       </Portal>
