@@ -1,5 +1,11 @@
 ## Unreleased (2019-01-04)
 
+## <small>3.1.1 (2019-01-04)</small>
+
+- 3.1.1 ([38c4f84](https://github.com/evenchange4/react-overlay-pack/commit/38c4f84))
+- fix(Dialog): merge style of child (#132) ([0dba434](https://github.com/evenchange4/react-overlay-pack/commit/0dba434)), closes [#132](https://github.com/evenchange4/react-overlay-pack/issues/132)
+- docs(CHANGELOG): release 3.1.0 ([769a744](https://github.com/evenchange4/react-overlay-pack/commit/769a744))
+
 ## 3.1.0 (2019-01-04)
 
 - 3.1.0 ([d954063](https://github.com/evenchange4/react-overlay-pack/commit/d954063))
