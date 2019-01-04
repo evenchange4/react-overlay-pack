@@ -3,9 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Portal from '../Portal';
 import Transition from '../Transition';
-import ClickOutside from '../ClickOutside';
 import emptyFunction from '../utils/emptyFunction';
-import { BackdropContainer, Container } from './Components';
+import { BackdropContainer, Container, Content } from './Components';
 
 export type Props = {
   show: boolean,
@@ -25,15 +24,15 @@ const Dialog = ({
   show && (
     <React.Fragment>
       <Portal>
-        <Transition component={BackdropContainer} {...backdropTransition} />
+        <Transition component={false} {...backdropTransition}>
+          <BackdropContainer onClick={onOutsideClick} />
+        </Transition>
       </Portal>
       <Portal>
         <Container>
-          <ClickOutside onClick={onOutsideClick}>
-            <Transition component={false} {...containerTransition}>
-              {children}
-            </Transition>
-          </ClickOutside>
+          <Transition component={false} {...containerTransition}>
+            <Content>{children}</Content>
+          </Transition>
         </Container>
       </Portal>
     </React.Fragment>

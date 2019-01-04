@@ -6,10 +6,7 @@ import { action } from '@storybook/addon-actions';
 import Dialog from '.';
 import Overlay from '../Overlay';
 
-class MenuOverlay extends React.Component<
-  { menuRef: React.ElementRef<*> },
-  { show: boolean },
-> {
+class MenuOverlay extends React.Component<{||}, { show: boolean }> {
   state = { show: false };
 
   target = React.createRef();
@@ -21,7 +18,6 @@ class MenuOverlay extends React.Component<
   render() {
     const { show } = this.state;
     const { onClick, onHide, target } = this;
-    const { menuRef } = this.props;
 
     return (
       <div>
@@ -37,11 +33,7 @@ class MenuOverlay extends React.Component<
         </div>
 
         <Overlay show={show} target={target} onOutsideClick={onHide}>
-          <div
-            key="menu"
-            ref={menuRef}
-            style={{ width: 300, backgroundColor: 'aliceblue' }}
-          >
+          <div key="menu" style={{ width: 300, backgroundColor: 'aliceblue' }}>
             <div
               onClick={action('click 1')}
               onKeyPress={action('click 1')}
@@ -66,30 +58,19 @@ class MenuOverlay extends React.Component<
 }
 
 class StatefulDialog extends React.Component<
-  {
-    containerTransition?: Object,
-  },
-  {
-    show: boolean,
-  },
+  { containerTransition?: Object },
+  { show: boolean },
 > {
   state = { show: false };
 
-  overlay = React.createRef();
-
   onClick = () => this.setState(({ show }) => ({ show: !show }));
 
-  onHide = (e: SyntheticEvent<any>) => {
-    const overlay = this.overlay.current;
-    // Hint: Omit clicking overlay.
-    if (overlay && overlay.contains(e.target)) return; // Node: Omit clicking itself.
-    this.setState({ show: false });
-  };
+  onHide = () => this.setState({ show: false });
 
   render() {
     const { show } = this.state;
     const { containerTransition } = this.props;
-    const { overlay, onClick, onHide } = this;
+    const { onClick, onHide } = this;
 
     return (
       <div>
@@ -110,7 +91,7 @@ class StatefulDialog extends React.Component<
         >
           <div key="div" style={{ width: 300, backgroundColor: 'aliceblue' }}>
             This is content.
-            <MenuOverlay menuRef={overlay} />
+            <MenuOverlay />
           </div>
         </Dialog>
       </div>
