@@ -1,4 +1,14 @@
-## Unreleased (2018-12-26)
+## Unreleased (2019-01-04)
+
+## 3.1.0 (2019-01-04)
+
+- 3.1.0 ([d954063](https://github.com/evenchange4/react-overlay-pack/commit/d954063))
+- fix(Dialog): remove ClickOutside in Dialog (#131) ([b1c33d9](https://github.com/evenchange4/react-overlay-pack/commit/b1c33d9)), closes [#131](https://github.com/evenchange4/react-overlay-pack/issues/131)
+- fix(storybook): remove babel devDependencies ([970c698](https://github.com/evenchange4/react-overlay-pack/commit/970c698))
+- chore(deps): update dependency eslint to v5.11.1 (#127) ([76a0570](https://github.com/evenchange4/react-overlay-pack/commit/76a0570)), closes [#127](https://github.com/evenchange4/react-overlay-pack/issues/127)
+- chore(deps): update dependency hsu-scripts to v1 (#129) ([df65cdc](https://github.com/evenchange4/react-overlay-pack/commit/df65cdc)), closes [#129](https://github.com/evenchange4/react-overlay-pack/issues/129)
+- chore(travis): use node 11.5.0 ([75a8aff](https://github.com/evenchange4/react-overlay-pack/commit/75a8aff))
+- docs(CHANGELOG): release 3.0.10 ([fa932ec](https://github.com/evenchange4/react-overlay-pack/commit/fa932ec))
 
 ## <small>3.0.10 (2018-12-26)</small>
 
