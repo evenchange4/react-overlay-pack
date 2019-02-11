@@ -147,8 +147,8 @@ type Props = {
 
 ### Requirements
 
-- node >= 11.6.0
-- yarn >= 1.12.3
+- node >= 11.9.0
+- yarn >= 1.13.0
 - react >= 16
 
 ```sh
